@@ -27,7 +27,7 @@ static MMGDrag_Drop* instance;
     if (mainView) {
         view=mainView;
         lastScale=1;
-        if ([viewsArray isKindOfClass:[UIView class]]) {
+        if (viewsArray) {
             for (int i =0; i<viewsArray.count; i++) {
                 if ([viewsArray[i] isKindOfClass:[UIView class]]) {
                     UIPanGestureRecognizer* tapGes = [[UIPanGestureRecognizer alloc] initWithTarget:self action:@selector(moveImage:)];
