@@ -17,6 +17,6 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    [[MMGDrag_Drop getInstance] arrayOfViewsToBeDraggedAndDrop:[NSArray arrayWithObjects:_mainImageView,_secondImageView,_testView, nil] onView:self.view];
+    [[MMGDrag_Drop getInstance] arrayOfViewsToBeDragged_DropAndZoom:[NSArray arrayWithObjects:_mainImageView,_secondImageView,_testView, nil] onView:self.view];
 }
 @end

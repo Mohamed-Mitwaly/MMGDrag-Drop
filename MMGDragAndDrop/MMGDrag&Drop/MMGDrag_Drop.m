@@ -23,7 +23,7 @@ static MMGDrag_Drop* instance;
     return instance;
 }
 
--(int)arrayOfViewsToBeDraggedAndDrop:(NSArray*)viewsArray onView:(UIView*)mainView{
+-(int)arrayOfViewsToBeDragged_DropAndZoom:(NSArray*)viewsArray onView:(UIView*)mainView{
     if (mainView) {
         view=mainView;
         lastScale=1;
@@ -36,7 +36,7 @@ static MMGDrag_Drop* instance;
                     UIPinchGestureRecognizer* pinchGes = [[UIPinchGestureRecognizer alloc] initWithTarget:self action:@selector(zoomIMage:)];
                     [pinchGes setDelegate:self];
                     [(UIView*)viewsArray[i] addGestureRecognizer:pinchGes];
-                }  
+                }
             }
             return 1;
         }else{
@@ -64,7 +64,7 @@ static MMGDrag_Drop* instance;
             temprect.origin.x = imagePoint.x + currePoint.x-startPoint.x;
             temprect.origin.y = imagePoint.y + currePoint.y-startPoint.y;
             tempImageView.frame = temprect;
-        } 
+        }
     }else if (tapGes.state == UIGestureRecognizerStateEnded){
         imagePoint=tempImageView.frame.origin;
     }
