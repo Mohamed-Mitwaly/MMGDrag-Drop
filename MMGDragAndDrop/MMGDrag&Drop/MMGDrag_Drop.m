@@ -72,9 +72,18 @@ static MMGDrag_Drop* instance;
 
 -(void)zoomIMage:(UIPinchGestureRecognizer*)pinchGes{
     UIImageView* tempImageView = (UIImageView*)[pinchGes view];
+    
     [UIView animateWithDuration:.1 animations:^{
-        CGRect tempRect = CGRectMake(tempImageView.frame.origin.x, tempImageView.frame.origin.y, tempImageView.frame.size.width+ (tempImageView.frame.size.width * ([pinchGes scale] - lastScale)),tempImageView.frame.size.height + (tempImageView.frame.size.height* ([pinchGes scale] - lastScale)));
-        tempImageView.frame = tempRect;
+        CGRect tempRect = CGRectMake(
+            tempImageView.frame.origin.x
+            , tempImageView.frame.origin.y
+            , tempImageView.frame.size.width+ (tempImageView.frame.size.width * ([pinchGes scale] - lastScale))
+            ,tempImageView.frame.size.height + (tempImageView.frame.size.height* ([pinchGes scale] - lastScale)));
+        
+        tempRect = CGRectMake(tempImageView.frame.origin.x - ((tempRect.size.width - tempImageView.frame.size.width)/2)
+            , tempImageView.frame.origin.y - ((tempRect.size.height - tempImageView.frame.size.height)/2)
+            , tempRect.size.width, tempRect.size.height);
+            tempImageView.frame = tempRect;
         lastScale=[pinchGes scale];
     }];
     if (pinchGes.state == UIGestureRecognizerStateEnded)
