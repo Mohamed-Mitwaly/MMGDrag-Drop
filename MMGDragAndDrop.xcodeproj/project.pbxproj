@@ -21,6 +21,8 @@
 		F0C95706197C02320009C381 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F0C956E8197C02320009C381 /* UIKit.framework */; };
 		F0C9570E197C02320009C381 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = F0C9570C197C02320009C381 /* InfoPlist.strings */; };
 		F0C95710197C02320009C381 /* MMGDragAndDropTests.m in Sources */ = {isa = PBXBuildFile; fileRef = F0C9570F197C02320009C381 /* MMGDragAndDropTests.m */; };
+		F0C9571C197C028B0009C381 /* MMGDrag_Drop.m in Sources */ = {isa = PBXBuildFile; fileRef = F0C9571B197C028B0009C381 /* MMGDrag_Drop.m */; };
+		F0C9571E197C03D50009C381 /* ios.png in Resources */ = {isa = PBXBuildFile; fileRef = F0C9571D197C03D50009C381 /* ios.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +55,9 @@
 		F0C9570B197C02320009C381 /* MMGDragAndDropTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "MMGDragAndDropTests-Info.plist"; sourceTree = "<group>"; };
 		F0C9570D197C02320009C381 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		F0C9570F197C02320009C381 /* MMGDragAndDropTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MMGDragAndDropTests.m; sourceTree = "<group>"; };
+		F0C9571A197C028B0009C381 /* MMGDrag_Drop.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MMGDrag_Drop.h; sourceTree = "<group>"; };
+		F0C9571B197C028B0009C381 /* MMGDrag_Drop.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MMGDrag_Drop.m; sourceTree = "<group>"; };
+		F0C9571D197C03D50009C381 /* ios.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ios.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -112,8 +117,10 @@
 		F0C956EA197C02320009C381 /* MMGDragAndDrop */ = {
 			isa = PBXGroup;
 			children = (
+				F0C95719197C028B0009C381 /* MMGDrag&Drop */,
 				F0C956F3197C02320009C381 /* AppDelegate.h */,
 				F0C956F4197C02320009C381 /* AppDelegate.m */,
+				F0C9571D197C03D50009C381 /* ios.png */,
 				F0C956F6197C02320009C381 /* Main.storyboard */,
 				F0C956F9197C02320009C381 /* ViewController.h */,
 				F0C956FA197C02320009C381 /* ViewController.m */,
@@ -150,6 +157,15 @@
 				F0C9570C197C02320009C381 /* InfoPlist.strings */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		F0C95719197C028B0009C381 /* MMGDrag&Drop */ = {
+			isa = PBXGroup;
+			children = (
+				F0C9571A197C028B0009C381 /* MMGDrag_Drop.h */,
+				F0C9571B197C028B0009C381 /* MMGDrag_Drop.m */,
+			);
+			path = "MMGDrag&Drop";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -229,6 +245,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				F0C956FD197C02320009C381 /* Images.xcassets in Resources */,
+				F0C9571E197C03D50009C381 /* ios.png in Resources */,
 				F0C956EF197C02320009C381 /* InfoPlist.strings in Resources */,
 				F0C956F8197C02320009C381 /* Main.storyboard in Resources */,
 			);
@@ -249,6 +266,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F0C9571C197C028B0009C381 /* MMGDrag_Drop.m in Sources */,
 				F0C956FB197C02320009C381 /* ViewController.m in Sources */,
 				F0C956F5197C02320009C381 /* AppDelegate.m in Sources */,
 				F0C956F1197C02320009C381 /* main.m in Sources */,
