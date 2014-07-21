@@ -80,6 +80,7 @@ static MMGDrag_Drop* instance;
     if (pinchGes.state == UIGestureRecognizerStateEnded)
     {
         lastScale=1;
+        
     }
 }
 @end
