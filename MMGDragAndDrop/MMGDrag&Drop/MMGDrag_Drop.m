@@ -23,19 +23,19 @@ static MMGDrag_Drop* instance;
     return instance;
 }
 
--(int)arrayOfPhotosToBeDraggedAndDrop:(NSArray *)photosArray onView:(UIView*)mainView{
+-(int)arrayOfViewsToBeDraggedAndDrop:(NSArray*)viewsArray onView:(UIView*)mainView{
     if (mainView) {
         view=mainView;
         lastScale=1;
-        if (photosArray) {
-            for (int i =0; i<photosArray.count; i++) {
-                if ([photosArray[i] isKindOfClass:[UIView class]]) {
+        if ([viewsArray isKindOfClass:[UIView class]]) {
+            for (int i =0; i<viewsArray.count; i++) {
+                if ([viewsArray[i] isKindOfClass:[UIView class]]) {
                     UIPanGestureRecognizer* tapGes = [[UIPanGestureRecognizer alloc] initWithTarget:self action:@selector(moveImage:)];
                     [tapGes setDelegate:self];
-                    [(UIImageView*)photosArray[i] addGestureRecognizer:tapGes];
+                    [(UIView*)viewsArray[i] addGestureRecognizer:tapGes];
                     UIPinchGestureRecognizer* pinchGes = [[UIPinchGestureRecognizer alloc] initWithTarget:self action:@selector(zoomIMage:)];
                     [pinchGes setDelegate:self];
-                    [(UIImageView*)photosArray[i] addGestureRecognizer:pinchGes];
+                    [(UIView*)viewsArray[i] addGestureRecognizer:pinchGes];
                 }  
             }
             return 1;
